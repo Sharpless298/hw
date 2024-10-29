@@ -2,5 +2,5 @@
 
 int main() {
 	int x;
-	printf("x is allocated at memory address %#lx-%#lx.\n", &x, (unsigned long)(&x)+sizeof(x)-1);
+	printf("x is allocated at memory address %p-%p.\n", &x, (unsigned long)(&x)+sizeof(x)-1);
 }
