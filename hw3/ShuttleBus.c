@@ -35,11 +35,13 @@ int main() {
 		printf("ERROR!\n");
 		return 0;
 	}
-	double k = 1.0;
+
+	double k;
 	if(d == 'Y') k = 0.5;
 	else if(b == 30) k = 0.75;
 	else if(b >= 10) k = 0.9;
 	else if(c == 1) k = 0.95;
+	else k = 1.0;
 
 	printf("You need to pay $%d for the ticket(s) you selected.\n", (int)ceil(price*b*k));
 }
