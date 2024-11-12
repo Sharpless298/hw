@@ -10,5 +10,5 @@ int main() {
 		printf("%lld", 1LL*(i+1)*(i+1));
 		ans += (i+1)*(i+1);
 	}
-	printf(" = %lld", ans);
+	printf(" = %lld\n", ans);
 }

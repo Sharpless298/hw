@@ -12,5 +12,5 @@ int main() {
 		printf("Error!\n");
 		return 0;
 	}
-	printf("GCD(%d, %d) = %d", a, b, gcd(a, b));
+	printf("GCD(%d, %d) = %d\n", a, b, gcd(a, b));
 }

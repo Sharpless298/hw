@@ -10,7 +10,7 @@ int main() {
 	}
 	for(int i=0; i<15; i++) {
 		if(n == (1<<i)) {
-			printf("%d is 2 to the power of %d.", n, i);
+			printf("%d is 2 to the power of %d.\n", n, i);
 			return 0;
 		}
 	}
