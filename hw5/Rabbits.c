@@ -10,11 +10,11 @@ int main() {
 	}
 
 	printf("|(n)th     |newborn   |growing   |matured   |total     \n");
-	printf("|%-10d|%-10d|%-10d|%-10d|%-10d\n", 1, 1, 0, 0, 0);
-	int a = 0, b = 1, c = 0;
-	for(int i=1; i<n; i++) {
+	int a = 1, b = 0, c = 0;
+	for(int i=0; i<n; i++) {
 		printf("|%-10d|%-10d|%-10d|%-10d|%-10d\n", i+1, a, b, c, a+b+c);
-		int t = a;
-		a = a + b, c = a, b = t;
+		c = c + b;
+		b = a;
+		a = c;
 	}
 }
