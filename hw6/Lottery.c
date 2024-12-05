@@ -12,14 +12,19 @@ int main() {
 	
 	int vis[100];
 	memset(vis, 0, sizeof(vis));
-
+	int len = 0;
 	for(int i=0; i<2; i++) {
 		for(int j=5; j<100; j++) {
 			int ok = 1;
 			for(int k=0; k<8; k++) 
 				if(c[i][k] != c[j][k+2]) ok = 0;
 
-			if(ok) printf("%s%9d\n", c[j], a[i]), vis[j] = 1;
+			if(ok) {
+				vis[j] = 1;
+				printf("%s \n", c[j]);
+				if(!len) len = printf("%d\n", a[i]);
+				else printf("%*d\n", len, a[i]);
+			}
 		}
 	}
 	for(int d=8; d>=3; d--) {
@@ -30,7 +35,12 @@ int main() {
 				for(int k=7; k>=8-d; k--) 
 					if(c[i][k+2] != c[j][k]) ok = 0;
 				
-				if(ok) printf("%s%9d\n", c[i], a[10-d]), vis[i] = 1;
+				if(ok) {
+					vis[j] = 1;
+					printf("%s \n", c[i]);
+					if(!len) len = printf("%d\n", a[10-d]);
+					else printf("%*d\n", len, a[10-d]);
+				}
 			}
 		}
 	}
