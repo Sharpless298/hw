@@ -37,7 +37,7 @@ int main() {
 					if(c[i][k+2] != c[j][k]) ok = 0;
 				
 				if(ok) {
-					vis[j] = 1;
+					vis[i] = 1;
 					printf("%s ", c[i]);
 					if(!len) len = printf("%d", a[10-d]);
 					else printf("%*d", len, a[10-d]);
