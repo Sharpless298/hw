@@ -21,9 +21,10 @@ int main() {
 
 			if(ok) {
 				vis[j] = 1;
-				printf("%s \n", c[j]);
-				if(!len) len = printf("%d\n", a[i]);
-				else printf("%*d\n", len, a[i]);
+				printf("%s ", c[j]);
+				if(!len) len = printf("%d", a[i]);
+				else printf("%*d", len, a[i]);
+				printf("\n");
 			}
 		}
 	}
@@ -37,9 +38,10 @@ int main() {
 				
 				if(ok) {
 					vis[j] = 1;
-					printf("%s \n", c[i]);
-					if(!len) len = printf("%d\n", a[10-d]);
-					else printf("%*d\n", len, a[10-d]);
+					printf("%s ", c[i]);
+					if(!len) len = printf("%d", a[10-d]);
+					else printf("%*d", len, a[10-d]);
+					printf("\n");
 				}
 			}
 		}
