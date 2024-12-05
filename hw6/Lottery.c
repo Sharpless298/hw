@@ -1,11 +1,34 @@
 #include <stdio.h>
 #include <string.h>
 
+void swap(int a, int b, char c[100][100]) {
+	char t[100];
+	strcpy(t, c[a]);
+	strcpy(c[a], c[b]);
+	strcpy(c[b], t);
+}
+
+int check(int a, int b, char c[100][100]) {
+	return strcmp(c[a], c[b]) > 0;
+}
+
 int main() {
 	char c[100][100];
-	for(int i=0; i<100; i++)
+
+	for(int i=0; i<100; i++) 
 		scanf("%s", c[i]);
 	
+	for(int i=0; i<94; i++) {
+		for(int j=5; j<99-i; j++) {
+			if(check(j, j+1, c)) {
+				swap(j, j+1, c);
+			}
+		}
+	}
+	/*
+	for(int i=0; i<100; i++) 
+		printf("%s\n", c[i]);
+	*/	
 	int a[8] = {10000000, 2000000, 200000, 40000, 10000, 4000, 1000, 200};
 	
 	int vis[100];
