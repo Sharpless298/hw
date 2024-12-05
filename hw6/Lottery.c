@@ -1,26 +1,10 @@
 #include <stdio.h>
 #include <string.h>
 
-/*
-void swap(char *a, char *b) {
-	char temp = *a;
-	*a = *b;
-	*b = temp;
-}
-
-int check(int a, int b) {
-	for(int i=0; i<10; i++)
-		if(c[a][i] > c[b][i]) return 1;
-	return 0;
-}
-*/
 int main() {
-	char c[100][10];
+	char c[100][100];
 	for(int i=0; i<100; i++)
 		scanf("%s", c[i]);
-	/*for(int i=5; i<99; i++) 
-		for(int j=5; j<98-i+5; j++) 
-			if(check(j, j+1)) swap(c[j], c[j+1]);	*/
 	
 	int a[8] = {10000000, 2000000, 200000, 40000, 10000, 4000, 1000, 200};
 	
@@ -35,11 +19,11 @@ int main() {
 
 			if(ok) {
 				vis[j] = 1;
-				 printf("%s ", c[j]);
+				printf("%s ", c[j]);
 				if(!len) len = printf("%d", a[i]);
 				else printf("%*d", len, a[i]);
+				printf("\n");
 			}
-			printf("\n");
 		}
 	}
 	for(int d=8; d>=3; d--) {
@@ -55,8 +39,8 @@ int main() {
 					printf("%s ", c[i]);
 					if(!len) len = printf("%d", a[10-d]);
 					else printf("%*d", len, a[10-d]);
+					printf("\n");
 				}
-				printf("\n");
 			}
 		}
 	}
