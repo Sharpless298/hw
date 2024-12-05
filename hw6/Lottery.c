@@ -1,14 +1,29 @@
 #include <stdio.h>
 #include <string.h>
 
+char c[100][10];
+
+void swap(char *a, char *b) {
+	char temp = *a;
+	*a = *b;
+	*b = temp;
+}
+
+int check(int a, int b) {
+	for(int i=0; i<10; i++)
+		if(c[a][i] > c[b][i]) return 1;
+	return 0;
+}
+
 int main() {
-	char c[100][100];
 	for(int i=0; i<100; i++)
 		scanf("%s", c[i]);
-	
+
+	/*for(int i=5; i<99; i++) 
+		for(int j=5; j<98-i+5; j++) 
+			if(check(j, j+1)) swap(c[j], c[j+1]);	*/
+
 	int a[8] = {10000000, 2000000, 200000, 40000, 10000, 4000, 1000, 200};
-	int cnt[8];
-	memset(cnt, 0, sizeof(cnt));
 	
 	int vis[100];
 	memset(vis, 0, sizeof(vis));
