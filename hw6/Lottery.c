@@ -27,10 +27,10 @@ int main() {
 			if(vis[i]) continue;
 			for(int j=2; j<5; j++) {
 				int ok = 1;
-				for(int k=7; k>=7-d; k--) 
+				for(int k=7; k>=8-d; k--) 
 					if(c[i][k+2] != c[j][k]) ok = 0;
 				
-				if(ok) printf("%s%9d\n", c[i], a[j]), vis[i] = 1;
+				if(ok) printf("%s%9d\n", c[i], a[10-d]), vis[i] = 1;
 			}
 		}
 	}
