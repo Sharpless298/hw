@@ -16,11 +16,22 @@ int main() {
 	for(int i=0; i<2; i++) {
 		for(int j=5; j<100; j++) {
 			int ok = 1;
-			for(int k=0; k<8; k++) {
-				if(c[0][k] != c[j][k+2]) ok = 0;
-			}
+			for(int k=0; k<8; k++) 
+				if(c[i][k] != c[j][k+2]) ok = 0;
 
-			if(ok) printf("%s%9d\n", c[j], a[i]);
+			if(ok) printf("%s%9d\n", c[j], a[i]), vis[j] = 1;
+		}
+	}
+	for(int d=8; d>=3; d--) {
+		for(int i=5; i<100; i++) {
+			if(vis[i]) continue;
+			for(int j=2; j<5; j++) {
+				int ok = 1;
+				for(int k=7; k>=7-d; k--) 
+					if(c[i][k+2] != c[j][k]) ok = 0;
+				
+				if(ok) printf("%s%9d\n", c[i], a[j]), vis[i] = 1;
+			}
 		}
 	}
 }
