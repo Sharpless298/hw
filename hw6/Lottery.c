@@ -25,11 +25,6 @@ int main() {
 	for(int i=0; i<99; i++)
 		for(int j=0; j<99-i; j++)
 			if(check(j, j+1, b)) swap(j, j+1, b); 
-	/*
-	for(int i=0; i<5; i++)
-		printf("%s\n", a[i]);
-	for(int i=0; i<100; i++)
-		printf("%s\n", b[i]);*/
 	
 	int vis[100];
 	memset(vis, 0, sizeof(vis));
