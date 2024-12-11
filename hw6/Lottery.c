@@ -30,22 +30,39 @@ int main() {
 	memset(vis, 0, sizeof(vis));
 
 	int len2 = 0;
-	for(int i=0; i<8; i++) {
+	for(int i=0; i<2; i++) {
 		for(int j=0; j<100; j++) {
 			if(vis[j]) continue;
-			for(int k=0; k<5; k++) {
-				int ok = 1;
-				for(int d=0; d<len[i]; d++)
-					if(a[k][8-d-1] != b[j][10-d-1]) ok = 0;
-				if(ok) {
-					vis[j] = 1;
-					printf("%s ", b[j]);
-					if(!len2) 
-						len2 = printf("%d", c[i]);
-					else 
-						printf("%*d", len2, c[i]);
-					printf("\n");
-				}
+			int ok = 1;
+			for(int d=0; d<len[i]; d++)
+				if(a[i][8-d-1] != b[j][10-d-1]) ok = 0;
+			if(ok) {
+				vis[j] = 1;
+				printf("%s ", b[j]);
+				if(!len2) 
+					len2 = printf("%d", c[i]);
+				else 
+					printf("%*d", len2, c[i]);
+				printf("\n");
+			}
+		}
+	}
+	for(int i=2; i<8; i++) {
+		for(int j=0; j<100; j++) {
+			if(vis[j]) continue;
+				for(int k=2; k<5; k++) {
+					int ok = 1;
+					for(int d=0; d<len[i]; d++)
+						if(a[k][8-d-1] != b[j][10-d-1]) ok = 0;
+					if(ok) {
+						vis[j] = 1;
+						printf("%s ", b[j]);
+						if(!len2) 
+							len2 = printf("%d", c[i]);
+						else 
+							printf("%*d", len2, c[i]);
+						printf("\n");
+					}
 			}
 		}
 	}
