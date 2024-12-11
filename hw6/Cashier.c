@@ -14,8 +14,13 @@ int main() {
 	memset(d, 0, sizeof(d));
 	int t = b-a;
 	
-	if(a<=0 || b<=0 || t<0) {
+	if(a<=0 || b<=0) {
 		printf("Invalid value\n");
+		return 0;
+	}
+	
+	if(t < 0) {
+		printf("Invalid input\n");
 		return 0;
 	}
 
