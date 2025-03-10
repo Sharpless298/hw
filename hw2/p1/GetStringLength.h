@@ -1,0 +1,1 @@
+int GetStringLength(char src[]);
