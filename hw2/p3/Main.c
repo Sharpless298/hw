@@ -12,7 +12,7 @@ int main() {
     scanf("%128s", substr);
  
     count = GetCountsOfSubString(srcstr, substr);
- 
+	
     switch (count) {
         case 0:
             printf("The needle \"%s\" does not appear in the haystack.\n", substr);

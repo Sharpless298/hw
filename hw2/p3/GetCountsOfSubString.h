@@ -1,1 +1,1 @@
-int GetCountsOfSubString(char s[], char c[]);
+int GetCountsOfSubString(char s[], char t[]);
